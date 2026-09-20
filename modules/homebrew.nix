@@ -25,10 +25,12 @@ in
       };
       taps = [
         "nikitabobko/tap"
+        "rdrkr/tap"
       ];
       casks = [
         "ghostty"
         "aerospace"
+        "aerospacebar"
         "raycast"
         "google-chrome"
         "neovide-app"
