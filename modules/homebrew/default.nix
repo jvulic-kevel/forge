@@ -43,6 +43,7 @@ in
         "google-chrome"
         "neovide-app"
         "zoom"
+        "slack"
       ];
     };
   };
