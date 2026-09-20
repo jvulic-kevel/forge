@@ -47,6 +47,11 @@ in
           _abbr_vim
           _abbr_kube
           _abbr_mount
+
+          # Ensure homebrew binaries are in PATH.
+          if test -d /opt/homebrew/bin
+            fish_add_path --prepend --global /opt/homebrew/bin
+          end
         '';
         plugins = [
           {
