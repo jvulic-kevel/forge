@@ -14,6 +14,7 @@ in
   config = lib.mkIf cfg.enable {
     homebrew = {
       enable = true;
+      enableFishIntegration = true;
       onActivation = {
         autoUpdate = true;
         upgrade = true;
