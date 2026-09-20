@@ -1,6 +1,7 @@
 font-family = monospace
 font-size = 13
 scrollback-limit = 50000000
+clipboard-read = allow
 
 # Keep window decorations enabled for AeroSpace to access the close button.
 window-decoration = true
