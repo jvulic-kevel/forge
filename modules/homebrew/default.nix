@@ -42,6 +42,7 @@ in
         "raycast"
         "google-chrome"
         "neovide-app"
+        "zoom"
       ];
     };
   };
