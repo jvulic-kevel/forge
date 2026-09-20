@@ -46,6 +46,14 @@ in
       localHostName = "apple";
     };
 
+    # Auto-start AeroSpaceBar at login using native launchd user agent.
+    launchd.user.agents.aerospacebar = {
+      serviceConfig = {
+        ProgramArguments = [ "/usr/bin/open" "-g" "-a" "AeroSpaceBar" ];
+        RunAtLoad = true;
+      };
+    };
+
     system.stateVersion = 6;
 
     # Keyboard configuration.
