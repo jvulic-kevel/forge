@@ -28,8 +28,10 @@ nix-darwin.lib.darwinSystem {
       { ... }:
       {
         forge = {
-          core.enable = true;
-          defaults.enable = true;
+          system.enable = true;
+          neovim.enable = true;
+          direnv.enable = true;
+          gcloud.enable = true;
           homebrew.enable = true;
           fish.enable = true;
           git.enable = true;

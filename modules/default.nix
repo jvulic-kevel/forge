@@ -1,13 +1,15 @@
 { ... }:
 {
   imports = [
-    ./core
-    ./defaults
-    ./homebrew
+    ./system.nix
+    ./neovim.nix
+    ./direnv.nix
+    ./gcloud.nix
+    ./homebrew.nix
     ./fish
-    ./git
+    ./git.nix
     ./docker
-    ./mcphub
+    ./mcphub.nix
     ./ghostty
     ./aerospace
   ];

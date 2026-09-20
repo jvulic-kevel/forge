@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 let
@@ -8,10 +9,15 @@ let
 in
 {
   options.forge.git = {
-    enable = lib.mkEnableOption "Declarative Git configuration";
+    enable = lib.mkEnableOption "Declarative Git configuration and git utilities";
   };
 
   config = lib.mkIf cfg.enable {
+    environment.systemPackages = [
+      pkgs.git
+      pkgs.lazygit
+    ];
+
     home-manager.users.jvulic = { ... }: {
       programs.git = {
         enable = true;
