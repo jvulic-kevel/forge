@@ -68,6 +68,17 @@ in
         FXPreferredViewStyle = "Nlsv"; # default list view
         _FXShowPosixPathInTitle = true; # show path in finder window title
       };
+      CustomUserPreferences = {
+        "com.google.Chrome" = {
+          NSUserKeyEquivalents = {
+            "New Tab" = "^t";
+            "Reopen Closed Tab" = "^$t";
+            "Close Tab" = "^w";
+            "New Window" = "^n";
+            "New Incognito Window" = "^$n";
+          };
+        };
+      };
       NSGlobalDomain = {
         # Low-latency key repeat (units are in 15ms blocks).
         InitialKeyRepeat = 15; # 225ms delay
