@@ -2,7 +2,7 @@ config-version = 2
 
 start-at-login = true
 
-# Keep only workspaces 1 to 10 active and persistent.
+# Keep only workspaces 1 to 10 around.
 persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 
 enable-normalization-flatten-containers = true
@@ -43,17 +43,25 @@ cmd-shift-0 = 'move-node-to-workspace 10'
 
 # Focuses nearest window in direction. Seamlessly crosses monitor boundaries 
 # but corrects the vertical monitor layout reversal.
-cmd-h = 'focus left --boundaries-action fail || focus-monitor left'
-cmd-j = 'focus down --boundaries-action fail || focus-monitor up'     # Fallback goes UP
-cmd-k = 'focus up --boundaries-action fail || focus-monitor down'     # Fallback goes DOWN
-cmd-l = 'focus right --boundaries-action fail || focus-monitor right'
+cmd-h = 'focus --boundaries-action fail left || focus-monitor left'
+cmd-j = 'focus --boundaries-action fail down || focus-monitor up'         # Fallback goes UP
+cmd-k = 'focus --boundaries-action fail up || focus-monitor down'         # Fallback goes DOWN
+cmd-l = 'focus --boundaries-action fail right || focus-monitor right'
+cmd-left = 'focus --boundaries-action fail left || focus-monitor left'
+cmd-down = 'focus --boundaries-action fail down || focus-monitor up'      # Fallback goes UP
+cmd-up = 'focus --boundaries-action fail up || focus-monitor down'        # Fallback goes DOWN
+cmd-right = 'focus --boundaries-action fail right || focus-monitor right'
 
 # Moves window in direction. Seamlessly crosses monitor boundaries
 # but corrects the vertical monitor layout reversal and ensures focus follows.
-cmd-shift-h = 'move left --boundaries-action fail || move-node-to-monitor left --focus-follows-window'
-cmd-shift-j = 'move down --boundaries-action fail || move-node-to-monitor up --focus-follows-window'     # Fallback goes UP
-cmd-shift-k = 'move up --boundaries-action fail || move-node-to-monitor down --focus-follows-window'     # Fallback goes DOWN
-cmd-shift-l = 'move right --boundaries-action fail || move-node-to-monitor right --focus-follows-window'
+cmd-shift-h = 'move --boundaries-action fail left || move-node-to-monitor --focus-follows-window left'
+cmd-shift-j = 'move --boundaries-action fail down || move-node-to-monitor --focus-follows-window up'         # Fallback goes UP
+cmd-shift-k = 'move --boundaries-action fail up || move-node-to-monitor --focus-follows-window down'         # Fallback goes DOWN
+cmd-shift-l = 'move --boundaries-action fail right || move-node-to-monitor --focus-follows-window right'
+cmd-shift-left = 'move --boundaries-action fail left || move-node-to-monitor --focus-follows-window left'
+cmd-shift-down = 'move --boundaries-action fail down || move-node-to-monitor --focus-follows-window up'      # Fallback goes UP
+cmd-shift-up = 'move --boundaries-action fail up || move-node-to-monitor --focus-follows-window down'        # Fallback goes DOWN
+cmd-shift-right = 'move --boundaries-action fail right || move-node-to-monitor --focus-follows-window right'
 
 # Window layouts and splitting.
 cmd-b = 'join-with left'
