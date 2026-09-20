@@ -107,6 +107,6 @@ esc = 'mode main'
 "6" = ['vx3276-qhd', 2, 'built-in']
 "7" = ['vx3276-qhd', 2, 'built-in']
 
-"8" = ['24g2w1g5', 3, 'secondary', 'built-in']
-"9" = ['24g2w1g5', 3, 'secondary', 'built-in']
-"10" = ['24g2w1g5', 3, 'secondary', 'built-in']
+"8" = ['24g2w1g5', 3, 'built-in']
+"9" = ['24g2w1g5', 3, 'built-in']
+"10" = ['24g2w1g5', 3, 'built-in']

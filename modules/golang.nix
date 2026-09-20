@@ -9,7 +9,11 @@ let
 in
 {
   options.forge.golang = {
-    enable = lib.mkEnableOption "Golang configuration.";
+    enable = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      description = "Whether to enable Golang configuration.";
+    };
   };
 
   config = lib.mkIf cfg.enable {

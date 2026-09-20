@@ -8,7 +8,11 @@ let
 in
 {
   options.forge.gcloud = {
-    enable = lib.mkEnableOption "Google Cloud configuration.";
+    enable = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      description = "Whether to enable Google Cloud configuration.";
+    };
   };
 
   config = lib.mkIf cfg.enable {

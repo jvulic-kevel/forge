@@ -9,7 +9,11 @@ let
 in
 {
   options.forge.system = {
-    enable = lib.mkEnableOption "System configuration.";
+    enable = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      description = "Whether to enable System configuration.";
+    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -68,23 +72,10 @@ in
         FXPreferredViewStyle = "Nlsv"; # default list view
         _FXShowPosixPathInTitle = true; # show path in finder window title
       };
-      CustomUserPreferences = {
-        "com.google.Chrome" = {
-          NSUserKeyEquivalents = {
-            "New Tab" = "^t";
-            "Reopen Closed Tab" = "^$t";
-            "Close Tab" = "^w";
-            "New Window" = "^n";
-            "New Incognito Window" = "^$n";
-          };
-        };
-      };
       NSGlobalDomain = {
         # Low-latency key repeat (units are in 15ms blocks).
         InitialKeyRepeat = 15; # 225ms delay
         KeyRepeat = 2; # 30ms repeat speed
-
-        "com.apple.swipescrolldirection" = false; # traditional mouse scroll direction
       };
     };
 
@@ -96,7 +87,7 @@ in
 
       programs.home-manager.enable = true;
 
-      # SUPRESS: programs.man.generateCaches has no effect when programs.man.package is null
+      # Suppress "programs.man.generateCaches has no effect when programs.man.package is null".
       programs.man.generateCaches = false;
     };
   };

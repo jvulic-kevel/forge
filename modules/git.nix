@@ -9,7 +9,11 @@ let
 in
 {
   options.forge.git = {
-    enable = lib.mkEnableOption "DGit configuration.";
+    enable = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      description = "Whether to enable DGit configuration.";
+    };
   };
 
   config = lib.mkIf cfg.enable {

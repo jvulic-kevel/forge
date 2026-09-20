@@ -9,7 +9,11 @@ let
 in
 {
   options.forge.neovim = {
-    enable = lib.mkEnableOption "Neovim configuration.";
+    enable = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      description = "Whether to enable Neovim configuration.";
+    };
   };
 
   config = lib.mkIf cfg.enable {

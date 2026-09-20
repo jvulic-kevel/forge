@@ -8,7 +8,11 @@ let
 in
 {
   options.forge.ghostty = {
-    enable = lib.mkEnableOption "Ghostty configuration.";
+    enable = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      description = "Whether to enable Ghostty configuration.";
+    };
   };
 
   config = lib.mkIf cfg.enable {

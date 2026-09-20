@@ -24,25 +24,5 @@ nix-darwin.lib.darwinSystem {
         };
       };
     }
-    (
-      { ... }:
-      {
-        forge = {
-          system.enable = true;
-          neovim.enable = true;
-          direnv.enable = true;
-          golang.enable = true;
-          python.enable = true;
-          gcloud.enable = true;
-          homebrew.enable = true;
-          fish.enable = true;
-          git.enable = true;
-          docker.enable = true;
-          mcphub.enable = true;
-          ghostty.enable = true;
-          aerospace.enable = true;
-        };
-      }
-    )
   ];
 }

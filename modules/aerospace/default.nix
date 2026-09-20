@@ -8,7 +8,11 @@ let
 in
 {
   options.forge.aerospace = {
-    enable = lib.mkEnableOption "AeroSpace configuration.";
+    enable = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      description = "Whether to enable AeroSpace configuration.";
+    };
   };
 
   config = lib.mkIf cfg.enable {

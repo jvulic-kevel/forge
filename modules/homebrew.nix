@@ -8,7 +8,11 @@ let
 in
 {
   options.forge.homebrew = {
-    enable = lib.mkEnableOption "Homebrew configuration.";
+    enable = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      description = "Whether to enable Homebrew configuration.";
+    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -23,10 +27,11 @@ in
         "nikitabobko/tap"
       ];
       casks = [
-        "ghostty" # modern gpu-accelerated terminal
-        "aerospace" # sway-style tiling window manager
-        "google-chrome" # primary browser
-        "neovide" # modern GUI for Neovim
+        "ghostty"
+        "aerospace"
+        "raycast"
+        "google-chrome"
+        "neovide-app"
       ];
     };
   };

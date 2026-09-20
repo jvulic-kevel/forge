@@ -8,7 +8,11 @@ let
 in
 {
   options.forge.docker = {
-    enable = lib.mkEnableOption "Docker configuration.";
+    enable = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      description = "Whether to enable Docker configuration.";
+    };
   };
 
   config = lib.mkIf cfg.enable {

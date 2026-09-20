@@ -39,3 +39,4 @@ keybind = performable:ctrl+shift+c=copy_to_clipboard
 keybind = ctrl+shift+v=paste_from_clipboard
 keybind = performable:cmd+shift+c=copy_to_clipboard
 keybind = cmd+shift+v=paste_from_clipboard
+keybind = cmd+shift+enter=new_window

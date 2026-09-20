@@ -8,7 +8,11 @@ let
 in
 {
   options.forge.direnv = {
-    enable = lib.mkEnableOption "Direnv configuration.";
+    enable = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      description = "Whether to enable Direnv configuration.";
+    };
   };
 
   config = lib.mkIf cfg.enable {
