@@ -10,7 +10,7 @@ let
 in
 {
   options.forge.mcphub = {
-    enable = lib.mkEnableOption "Custom MCP Hub server and dependencies";
+    enable = lib.mkEnableOption "MCP Hub configuration.";
   };
 
   config = lib.mkIf cfg.enable {

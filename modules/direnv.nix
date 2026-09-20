@@ -8,7 +8,7 @@ let
 in
 {
   options.forge.direnv = {
-    enable = lib.mkEnableOption "Declarative Direnv configuration with Nix integration";
+    enable = lib.mkEnableOption "Direnv configuration.";
   };
 
   config = lib.mkIf cfg.enable {

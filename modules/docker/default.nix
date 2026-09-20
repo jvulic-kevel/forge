@@ -8,7 +8,7 @@ let
 in
 {
   options.forge.docker = {
-    enable = lib.mkEnableOption "Docker configuration and credentials helpers";
+    enable = lib.mkEnableOption "Docker configuration.";
   };
 
   config = lib.mkIf cfg.enable {

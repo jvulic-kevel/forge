@@ -8,7 +8,7 @@ let
 in
 {
   options.forge.aerospace = {
-    enable = lib.mkEnableOption "AeroSpace window manager configuration";
+    enable = lib.mkEnableOption "AeroSpace configuration.";
   };
 
   config = lib.mkIf cfg.enable {

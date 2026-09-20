@@ -9,7 +9,7 @@ let
 in
 {
   options.forge.system = {
-    enable = lib.mkEnableOption "macOS system tuning, low-level defaults, security, and user accounts";
+    enable = lib.mkEnableOption "System configuration.";
   };
 
   config = lib.mkIf cfg.enable {

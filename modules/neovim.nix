@@ -9,7 +9,7 @@ let
 in
 {
   options.forge.neovim = {
-    enable = lib.mkEnableOption "Neovim editor configuration and astronvim/mason requirements";
+    enable = lib.mkEnableOption "Neovim configuration.";
   };
 
   config = lib.mkIf cfg.enable {
@@ -20,6 +20,12 @@ in
       # astronvim & mason requirements
       pkgs.nodejs
       pkgs.gnumake
+      pkgs.gcc
+      pkgs.unzip
+      pkgs.wget
+      pkgs.gzip
+      pkgs.gnutar
+      pkgs.python3
       pkgs.gdu
       pkgs.bottom
     ];

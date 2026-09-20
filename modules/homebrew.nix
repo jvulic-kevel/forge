@@ -8,7 +8,7 @@ let
 in
 {
   options.forge.homebrew = {
-    enable = lib.mkEnableOption "Declarative Homebrew package management on macOS";
+    enable = lib.mkEnableOption "Homebrew configuration.";
   };
 
   config = lib.mkIf cfg.enable {

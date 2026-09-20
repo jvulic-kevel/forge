@@ -9,7 +9,7 @@ let
 in
 {
   options.forge.git = {
-    enable = lib.mkEnableOption "Declarative Git configuration and git utilities";
+    enable = lib.mkEnableOption "DGit configuration.";
   };
 
   config = lib.mkIf cfg.enable {

@@ -9,7 +9,7 @@ let
 in
 {
   options.forge.fish = {
-    enable = lib.mkEnableOption "Tailored Fish shell configurations, plugins, and CLI tools";
+    enable = lib.mkEnableOption "Fish configuration.";
   };
 
   config = lib.mkIf cfg.enable {
