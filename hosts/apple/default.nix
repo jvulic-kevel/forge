@@ -31,6 +31,8 @@ nix-darwin.lib.darwinSystem {
           system.enable = true;
           neovim.enable = true;
           direnv.enable = true;
+          golang.enable = true;
+          python.enable = true;
           gcloud.enable = true;
           homebrew.enable = true;
           fish.enable = true;
