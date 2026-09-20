@@ -29,7 +29,11 @@ in
         "FelixKratz/formulae"
       ];
       brews = [
-        "borders"
+        {
+          name = "borders";
+          restart_service = "always";
+          start_service = true;
+        }
       ];
       casks = [
         "ghostty"

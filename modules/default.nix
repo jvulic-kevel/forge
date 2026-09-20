@@ -10,7 +10,7 @@
     ./ghostty
     ./git.nix
     ./golang.nix
-    ./homebrew.nix
+    ./homebrew
     ./mcphub.nix
     ./neovim.nix
     ./python.nix
