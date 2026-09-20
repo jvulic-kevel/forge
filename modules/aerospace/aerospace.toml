@@ -94,31 +94,19 @@ right = 'resize width +10'
 enter = 'mode main'
 esc = 'mode main'
 
-# Static workspace partitioning. Map workspaces to specific displays to
-# maintain spatial memory:
-# - Workspaces 1, 2, 3: MacBook
-# - Workspaces 4 to 7: Big Screen
-# - Workspaces 8 to 10 (0): Smaller Screen
+# Map workspaces to specific displays:
 #
-# NOTE on Workspace 11/12 (Phantom Workspaces):
-# AeroSpace requires every connected display to show a workspace at all times.
-# If a monitor wakes up or is plugged in, and its assigned index or pattern 
-# (like 'secondary' on 3-monitor setups) is not resolved properly, AeroSpace
-# will dynamically generate Workspace 11 or 12 as a fallback.
-#
-# TIP: To prevent this completely, run 'aerospace list-monitors' on your Mac 
-# and replace the sequence sequences (2, 3) or 'secondary' below with your actual 
-# monitor name substrings (e.g., 'lg', 'dell', 'samsung').
+# NOTE: You can use aerospace list-monitors to get the specific monitor names.
 [workspace-to-monitor-force-assignment]
 "1" = 'built-in'
 "2" = 'built-in'
 "3" = 'built-in'
 
-"4" = [2, 'main', 'built-in']
-"5" = [2, 'main', 'built-in']
-"6" = [2, 'main', 'built-in']
-"7" = [2, 'main', 'built-in']
+"4" = ['vx3276-qhd', 2, 'built-in']
+"5" = ['vx3276-qhd', 2, 'built-in']
+"6" = ['vx3276-qhd', 2, 'built-in']
+"7" = ['vx3276-qhd', 2, 'built-in']
 
-"8" = [3, 'secondary', 'built-in']
-"9" = [3, 'secondary', 'built-in']
-"10" = [3, 'secondary', 'built-in']
+"8" = ['24g2w1g5', 3, 'secondary', 'built-in']
+"9" = ['24g2w1g5', 3, 'secondary', 'built-in']
+"10" = ['24g2w1g5', 3, 'secondary', 'built-in']
