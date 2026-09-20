@@ -1,16 +1,18 @@
 { ... }:
 {
   imports = [
-    ./system.nix
-    ./neovim.nix
-    ./direnv.nix
-    ./gcloud.nix
-    ./homebrew.nix
-    ./fish
-    ./git.nix
-    ./docker
-    ./mcphub.nix
-    ./ghostty
     ./aerospace
+    ./direnv.nix
+    ./docker
+    ./fish
+    ./gcloud.nix
+    ./ghostty
+    ./git.nix
+    ./golang.nix
+    ./homebrew.nix
+    ./mcphub.nix
+    ./neovim.nix
+    ./python.nix
+    ./system.nix
   ];
 }
