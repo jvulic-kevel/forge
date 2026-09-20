@@ -2,6 +2,7 @@
 {
   imports = [
     ./aerospace
+    ./borders
     ./direnv.nix
     ./docker
     ./fish

@@ -26,6 +26,10 @@ in
       taps = [
         "nikitabobko/tap"
         "rdrkr/tap"
+        "FelixKratz/formulae"
+      ];
+      brews = [
+        "borders"
       ];
       casks = [
         "ghostty"
