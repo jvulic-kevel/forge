@@ -11,6 +11,7 @@
     ./git.nix
     ./golang.nix
     ./homebrew
+    ./karabiner
     ./mcphub.nix
     ./neovim.nix
     ./python.nix

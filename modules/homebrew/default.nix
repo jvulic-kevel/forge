@@ -37,6 +37,7 @@ in
       ];
       casks = [
         "ghostty"
+        "karabiner-elements"
         "aerospace"
         "aerospacebar"
         "raycast"
