@@ -53,6 +53,7 @@ in
         "github"
         "super-productivity"
         "rippling"
+        "claude-code"
       ];
     };
   };
