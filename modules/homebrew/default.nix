@@ -44,6 +44,8 @@ in
         "neovide-app"
         "zoom"
         "slack"
+        "1password"
+        "1password-cli"
       ];
     };
   };
