@@ -51,6 +51,7 @@ in
         "rippling"
         "tailscale-app"
         "github"
+        "super-productivity"
       ];
     };
   };
