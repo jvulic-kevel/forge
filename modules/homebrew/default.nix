@@ -49,7 +49,7 @@ in
         "1password-cli"
         "getoutline"
         "rippling"
-        "tailscale"
+        "tailscale-app"
         "github"
       ];
     };
