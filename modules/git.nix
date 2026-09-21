@@ -33,10 +33,14 @@ in
           user = {
             name = "Josip Vulic";
             email = "jvulic@kevel.com";
+            signingKey= "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKFigqt9NEQAJPD5+YOY90eiBB2/hK8kASZJ5ycZg1Ok";
           };
           gpg = {
             format = "ssh";
-            ssh.program = "/usr/bin/ssh-keygen";
+            ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
+          };
+          commit = {
+            gpgSign = true;
           };
           init = {
             defaultBranch = "main";
