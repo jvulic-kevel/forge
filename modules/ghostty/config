@@ -49,3 +49,7 @@ keybind = cmd+v=unbind
 keybind = ctrl+backspace=text:\x1b\x7f
 keybind = ctrl+left=esc:b
 keybind = ctrl+right=esc:f
+
+# Unbind default super+d / super+shift+d splits to prevent accidental triggers.
+keybind = super+d=unbind
+keybind = super+shift+d=unbind
