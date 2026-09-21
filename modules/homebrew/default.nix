@@ -46,6 +46,10 @@ in
         "slack"
         "1password"
         "1password-cli"
+        "getoutline"
+        "rippling"
+        "tailscale"
+        "github"
       ];
     };
   };
