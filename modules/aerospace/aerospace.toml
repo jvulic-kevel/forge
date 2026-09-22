@@ -22,6 +22,14 @@ persistent-workspaces = [
 enable-normalization-flatten-containers = false
 enable-normalization-opposite-orientation-for-nested-containers = true
 
+# Move the mouse to the newly focused window whenever focus changes.
+on-focus-changed = ['move-mouse window-lazy-center']
+
+# Move the mouse to the newly active monitor when the active monitor itself
+# changes. This covers switching to an empty workspace on another monitor,
+# where on-focus-changed has no focused window to center on.
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+
 [gaps]
 inner.horizontal = 8
 inner.vertical = 8
