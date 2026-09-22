@@ -63,6 +63,24 @@ let
       key = "t";
       label = "New Tab";
     }
+    {
+      key = "r";
+      label = "Refresh";
+    }
+  ];
+
+  # Ctrl+Shift+<key> -> Cmd+Shift+<key>. Listed separately (and matched before
+  # ctrlToCmd below) so Shift isn't dropped, e.g. Ctrl+Shift+R for hard refresh
+  # instead of falling through to the plain Ctrl+R -> Cmd+R refresh mapping.
+  ctrlShiftToCmdShift = [
+    {
+      key = "r";
+      label = "Hard Refresh";
+    }
+    {
+      key = "c";
+      label = "Open Dev Console";
+    }
   ];
 
   # Ctrl+<key> -> Option+<key>, e.g. Ctrl+Backspace to Option+Backspace (word delete).
@@ -103,14 +121,46 @@ let
     ];
   };
 
+  ctrlShiftManipulator = { key, label }: {
+    description = "Ctrl+Shift+${key} to Cmd+Shift+${key} (${label})";
+    type = "basic";
+    from = {
+      key_code = key;
+      modifiers = {
+        mandatory = [
+          "control"
+          "shift"
+        ];
+        optional = [ "any" ];
+      };
+    };
+    to = [
+      {
+        key_code = key;
+        modifiers = [
+          "left_command"
+          "left_shift"
+        ];
+      }
+    ];
+    conditions = [
+      onDz60
+      notInTerminal
+    ];
+  };
+
 in
 {
   title = "DZ60RGB keyboard";
   rules = [
     {
       description = "Customize the DZ60RGB keyboard such that the experience using it on Mac is more Linux-like.";
+      # Ctrl+Shift+<key> manipulators must come first: Karabiner matches
+      # manipulators in order, and the plain Ctrl+<key> rules below use
+      # `optional: any` so they'd otherwise swallow the Shift-held combos too.
       manipulators =
-        (map (ctrlManipulator "command") ctrlToCmd)
+        (map ctrlShiftManipulator ctrlShiftToCmdShift)
+        ++ (map (ctrlManipulator "command") ctrlToCmd)
         ++ (map (ctrlManipulator "option") ctrlToOption);
     }
   ];
