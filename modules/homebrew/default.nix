@@ -52,6 +52,7 @@ in
         "tailscale-app"
         "github"
         "rippling"
+        "claude"
         "claude-code"
         "obsidian"
       ];
