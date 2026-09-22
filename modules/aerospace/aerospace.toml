@@ -3,7 +3,21 @@ config-version = 2
 start-at-login = true
 
 # Keep only workspaces 1 to 10 around.
-persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+#
+# NOTE: Names are zero-padded ("01".."10" rather than "1".."10") because
+# AeroSpaceBar sorts workspace IDs as strings, not numerically.
+persistent-workspaces = [
+  "01",
+  "02",
+  "03",
+  "04",
+  "05",
+  "06",
+  "07",
+  "08",
+  "09",
+  "10",
+]
 
 enable-normalization-flatten-containers = false
 enable-normalization-opposite-orientation-for-nested-containers = true
@@ -18,27 +32,27 @@ outer.right = 8
 
 [mode.main.binding]
 # Workspace navigation.
-cmd-1 = 'workspace 1'
-cmd-2 = 'workspace 2'
-cmd-3 = 'workspace 3'
-cmd-4 = 'workspace 4'
-cmd-5 = 'workspace 5'
-cmd-6 = 'workspace 6'
-cmd-7 = 'workspace 7'
-cmd-8 = 'workspace 8'
-cmd-9 = 'workspace 9'
+cmd-1 = 'workspace 01'
+cmd-2 = 'workspace 02'
+cmd-3 = 'workspace 03'
+cmd-4 = 'workspace 04'
+cmd-5 = 'workspace 05'
+cmd-6 = 'workspace 06'
+cmd-7 = 'workspace 07'
+cmd-8 = 'workspace 08'
+cmd-9 = 'workspace 09'
 cmd-0 = 'workspace 10'
 
 # Move node to workspace.
-cmd-shift-1 = 'move-node-to-workspace 1'
-cmd-shift-2 = 'move-node-to-workspace 2'
-cmd-shift-3 = 'move-node-to-workspace 3'
-cmd-shift-4 = 'move-node-to-workspace 4'
-cmd-shift-5 = 'move-node-to-workspace 5'
-cmd-shift-6 = 'move-node-to-workspace 6'
-cmd-shift-7 = 'move-node-to-workspace 7'
-cmd-shift-8 = 'move-node-to-workspace 8'
-cmd-shift-9 = 'move-node-to-workspace 9'
+cmd-shift-1 = 'move-node-to-workspace 01'
+cmd-shift-2 = 'move-node-to-workspace 02'
+cmd-shift-3 = 'move-node-to-workspace 03'
+cmd-shift-4 = 'move-node-to-workspace 04'
+cmd-shift-5 = 'move-node-to-workspace 05'
+cmd-shift-6 = 'move-node-to-workspace 06'
+cmd-shift-7 = 'move-node-to-workspace 07'
+cmd-shift-8 = 'move-node-to-workspace 08'
+cmd-shift-9 = 'move-node-to-workspace 09'
 cmd-shift-0 = 'move-node-to-workspace 10'
 
 # Focuses nearest window in direction.
@@ -100,15 +114,15 @@ esc = 'mode main'
 #
 # NOTE: You can use aerospace list-monitors to get the specific monitor names.
 [workspace-to-monitor-force-assignment]
-"1" = 'built-in'
-"2" = 'built-in'
-"3" = 'built-in'
+"01" = 'built-in'
+"02" = 'built-in'
+"03" = 'built-in'
 
-"4" = ['vx3276-qhd', 2, 'built-in']
-"5" = ['vx3276-qhd', 2, 'built-in']
-"6" = ['vx3276-qhd', 2, 'built-in']
-"7" = ['vx3276-qhd', 2, 'built-in']
+"04" = ['vx3276-qhd', 2, 'built-in']
+"05" = ['vx3276-qhd', 2, 'built-in']
+"06" = ['vx3276-qhd', 2, 'built-in']
+"07" = ['vx3276-qhd', 2, 'built-in']
 
-"8" = ['24g2w1g5', 3, 'built-in']
-"9" = ['24g2w1g5', 3, 'built-in']
+"08" = ['24g2w1g5', 3, 'built-in']
+"09" = ['24g2w1g5', 3, 'built-in']
 "10" = ['24g2w1g5', 3, 'built-in']
