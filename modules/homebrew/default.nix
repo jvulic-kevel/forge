@@ -54,6 +54,7 @@ in
         "rippling"
         "drata-agent"
         "claude-code"
+        "obsidian"
       ];
     };
   };
