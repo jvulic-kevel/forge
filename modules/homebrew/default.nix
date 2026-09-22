@@ -52,7 +52,6 @@ in
         "tailscale-app"
         "github"
         "rippling"
-        "drata-agent"
         "claude-code"
         "obsidian"
       ];
