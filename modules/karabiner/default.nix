@@ -5,6 +5,8 @@
 }:
 let
   cfg = config.forge.karabiner;
+
+  dz60Rules = import ./dz60_rules.nix;
 in
 {
   options.forge.karabiner = {
@@ -17,8 +19,8 @@ in
 
   config = lib.mkIf cfg.enable {
     home-manager.users.jvulic = { ... }: {
-      home.file.".config/karabiner/assets/complex_modifications/linux_rules.json".source =
-        ./linux_rules.json;
+      home.file.".config/karabiner/assets/complex_modifications/dz60_rules.json".text =
+        builtins.toJSON dz60Rules;
     };
   };
 }
