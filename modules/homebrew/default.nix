@@ -51,8 +51,8 @@ in
         "rippling"
         "tailscale-app"
         "github"
-        "super-productivity"
         "rippling"
+        "drata-agent"
         "claude-code"
       ];
     };
