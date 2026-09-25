@@ -55,6 +55,7 @@ in
         "claude"
         "claude-code"
         "obsidian"
+        "nimbalyst"
       ];
     };
   };
