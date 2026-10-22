@@ -56,6 +56,7 @@ in
         "claude-code"
         "obsidian"
         "nimbalyst"
+        "gh"
       ];
     };
   };
