@@ -34,6 +34,7 @@ in
           restart_service = "always";
           start_service = true;
         }
+        "gh"
       ];
       casks = [
         "ghostty"
@@ -56,7 +57,6 @@ in
         "claude-code"
         "obsidian"
         "nimbalyst"
-        "gh"
       ];
     };
   };
