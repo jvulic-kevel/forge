@@ -124,13 +124,13 @@ esc = 'mode main'
 [workspace-to-monitor-force-assignment]
 "01" = 'built-in'
 "02" = 'built-in'
-"03" = 'built-in'
 
+"03" = ['vx3276-qhd', 2, 'built-in']
 "04" = ['vx3276-qhd', 2, 'built-in']
 "05" = ['vx3276-qhd', 2, 'built-in']
 "06" = ['vx3276-qhd', 2, 'built-in']
 "07" = ['vx3276-qhd', 2, 'built-in']
+"08" = ['vx3276-qhd', 2, 'built-in']
 
-"08" = ['24g2w1g5', 3, 'built-in']
 "09" = ['24g2w1g5', 3, 'built-in']
 "10" = ['24g2w1g5', 3, 'built-in']
