@@ -6,7 +6,7 @@ This repository, "Forge," is a streamlined Nix-based project for managing macOS 
 
 The project is structured around a single-host, fully modular, and self-contained design targeting macOS.
 
-- **Nix Flakes:** The project entry point is `flake.nix`, which defines the dependencies (`nixpkgs`, `nix-darwin`, `home-manager`, `unstablepkgs`) and binds the final `darwinConfigurations.apple`.
+- **Nix Flakes:** The project entry point is `flake.nix`, which defines the dependencies (`nixpkgs`, `nix-darwin`, `home-manager`, `unstablepkgs`, `determinate`) and binds the final `darwinConfigurations.apple`.
 - **Hosts:** The configuration for our target Apple Silicon machine is located under `hosts/apple/default.nix`, which serves as the primary system builder invoking `darwinSystem` and defining system and home-manager module compositions.
 - **Encapsulated Modules:** Configuration modules are organized into self-contained subdirectories under `modules/` according to the service or tool they configure (e.g., `modules/fish/`, `modules/aerospace/`). Each subdirectory contains a `default.nix` module along with any adjacent, relevant config resources (like `.toml`, `.json`, or `.fish` files) loaded relative to that module.
 - **Custom Packages:** Custom packages are declared in `pkgs/` (for example, `mcp-hub`) and automatically exposed to both nix-darwin and home-manager scopes via `mypkgs`.

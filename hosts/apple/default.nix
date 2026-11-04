@@ -1,6 +1,7 @@
 {
   nix-darwin,
   home-manager,
+  determinate,
   system,
   pkgs,
   unstablepkgs,
@@ -14,6 +15,7 @@ nix-darwin.lib.darwinSystem {
   };
   modules = [
     ../../modules
+    determinate.darwinModules.default
     home-manager.darwinModules.home-manager
     {
       home-manager = {

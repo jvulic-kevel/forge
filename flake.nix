@@ -13,9 +13,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
+    determinate = {
+      url = "https://flakehub.com/f/DeterminateSystems/determinate/3";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ flake-parts, nixpkgs, nix-darwin, home-manager, nixpkgs-unstable, ... }:
+  outputs = inputs@{ flake-parts, nixpkgs, nix-darwin, home-manager, nixpkgs-unstable, determinate, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "aarch64-darwin" "x86_64-linux" "aarch64-linux" "x86_64-darwin" ];
 
@@ -40,7 +44,7 @@
               mypkgs = pkgs.callPackage ./pkgs { };
             in
             import ./hosts/apple {
-              inherit nix-darwin home-manager system pkgs unstablepkgs mypkgs;
+              inherit nix-darwin home-manager determinate system pkgs unstablepkgs mypkgs;
             };
         };
       };

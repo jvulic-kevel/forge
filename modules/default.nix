@@ -14,6 +14,7 @@
     ./karabiner
     ./mcphub.nix
     ./neovim.nix
+    ./nix.nix
     ./python.nix
     ./system.nix
   ];
